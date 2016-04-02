@@ -23,19 +23,16 @@ done();
 $.init.load(path.resolve(__dirname,'init','mdb.js'));
 $.init.load(path.resolve(__dirname,'init','ex.js'));
 $.init.load(path.resolve(__dirname,'model'));
+$.init.load(path.resolve(__dirname,'midw'));
 $.init.load(path.resolve(__dirname,'route'));
+$.init.load(path.resolve(__dirname,'method'));
 $.init((err)=>{
+
 if(err){
 console.error(err);
 process.exit(-1);
 }else{
 console.log('envini [env =%s]',$.env);
 }
-const ins =new $.model.user({
-name:'test',
-passwd:'111111',
-nick:'ini'
-});
-ins.save(console.log);
 }
 );
